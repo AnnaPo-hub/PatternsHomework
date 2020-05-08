@@ -10,6 +10,4 @@ public class RegistrationByCardInfo {
     private final String city;
     private final String name;
     private final PhoneNumber phone;
-
-
 }

@@ -2,6 +2,8 @@ package ru.netology.domain;
 
 import com.github.javafaker.Faker;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class DataGenerator {
@@ -19,6 +21,18 @@ public class DataGenerator {
                     faker.name().fullName(),
                     faker.phoneNumber()
             );
+        }
+
+        public static String generateDatePlus3() {
+            LocalDate now = LocalDate.now().plusDays(3);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
+            return now.format(formatter);
+        }
+
+        public static String generateDatePlus10() {
+            LocalDate now = LocalDate.now().plusDays(10);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
+            return now.format(formatter);
         }
     }
 }
